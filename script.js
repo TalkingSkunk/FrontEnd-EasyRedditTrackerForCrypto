@@ -28,9 +28,10 @@ let users = [
 let currentUser;
 
 class User {
-  constructor(username, password) {
+  constructor(username, password, saved) {
     this.userName = username;
     this.password = password;
+    this.saved = [];
   }
 }
 
@@ -50,17 +51,27 @@ function loadPage() {
   } else localStorage.users = JSON.stringify(users);
 }
 
+function storeUser(name, password) {
+  const newOne = new User(name, password);
+  users.push(newOne);
+  console.log(users);
+  console.log(newOne);
+  localStorage.users = JSON.stringify(users);
+}
+
 function newUser() {
   const name = $(".createUsername").val();
-  console.log(users);
   const password = $(".createPassword").val();
+  console.log(name, password);
   if (name && password) {
-    if (checkUserName(name)) return;
-    else {
-      ///////////////still storing values dio cane
-      const newOne = new User(name, password);
-      users.push(newOne);
-      localStorage.users = JSON.stringify(users);
+    let check = checkUserName(name);
+    console.log(check);
+    if (check) {
+      console.log(`checkUser is true`);
+      return;
+    } else {
+      console.log(`checkUser is false`);
+      storeUser(name, password);
     }
   } else alert("insert a valid input");
 }
@@ -73,17 +84,17 @@ function login() {
       el.password == password &&
       el.userName.toLowerCase() === username.toLowerCase()
   );
-  console.log(`${currentUser.userName} just logged in`);
+  if (currentUser) console.log(`${currentUser.userName} just logged in`);
+  else alert("user not found");
 }
 
 function checkUserName(user) {
-  let check = users.some(
-    (el) => el.userName.toLowerCase() === user.toLowerCase()
-  );
-  console.log(check);
+  const el = (el) => el.userName.toLowerCase() === user.toLowerCase();
+  let check = users.some(el);
+  return check;
 }
 
-$(".login").on("click", login);
+$(".loginBtn").on("click", login);
 $(".registerBtn").on("click", newUser);
 $(".registerBtnFirst").on("click", showRegister);
 $(".loginBtnFirst").on("click", showLogin);
