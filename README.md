@@ -73,7 +73,7 @@ Under the changing global economic circumstances, we see a needs gap of many pot
     - **_Done_**
 
 
-### Acceptance Criteria
+### Acceptance_Criteria
 
 * GIVEN I am entering the web host,
     * WHEN I sign up,
