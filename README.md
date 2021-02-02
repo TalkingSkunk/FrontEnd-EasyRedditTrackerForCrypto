@@ -1,17 +1,18 @@
-# Reddit-Tracker-for-Cryto
+# Reddit-Tracker-for-Crypto
 
 **Deployed application URL**
-https://github.com/Dragontalker/Reddit-Tracker-for-Cryto
+https://NEEDS-UPDATE (NEED TO BE CHANGED)
 
 **GitHub Repository URL**
 https://github.com/Dragontalker/Reddit-Tracker-for-Cryto
 
+
 ## Table of Contents
 
 * [Description](#description)
-    * [UserStory] (##userStory)  
-    * [AcceptanceCriteria] (##acceptanceCriteria) 
+    * [UserStory] (##user Story)
     * [Features](##features)
+        * [AcceptanceCriteria] (###acceptance Criteria)
 * [Wireframe](#wireframe)
 * [Credits](#credits)
 * [License](#license)
@@ -20,69 +21,72 @@ https://github.com/Dragontalker/Reddit-Tracker-for-Cryto
 * [Tests](#tests)
 
 
-
-
-## Description 
+## Description
 
 ### User Story
 
-```
-AS A marketing agency
-I WANT a codebase that follows accessibility standards
-SO THAT our own site is optimized for search engines
-```
-### Acceptance Criteria
+- You are an investor in cryptocurrency.
+- You need a web host where you can easily track my stocks investment.
+- With the web host, you will be able to store your investment info, and keep updated with latest news.
 
-Must use at least two server-side APIs
-Must use a CSS framework (ex. Bootstrap 5, or Materialize, or Semantic UI)
-Must use client-side storage to store persistent data
-Must have a polished, mobile-first UI
-Must meet good quality coding standards (indentation, scoping, naming, etc.)
-Does NOT use alerts, confirms, or prompts (look into modals). 
-Must be deployed to GitHub Pages
-Must be interactive (i.e: accept and respond to user input)
+### Features
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
+**What needs are we meeting?**
+- From the beginning, the system of how we buy and sell goods has always been changing.
+With the advent of technological advancements, our society is changing rapidly. This change could and probably will include our world's current currency system.
+With the looming changes, the investors have shown growing interest in the future of the currency system.
+Under the changing global economic circumstances, we see a needs gap of many potential investors. We want to meet their needs, so that they may:
+1. Be able to search the current stocks prices of User's choice of cryptocurrency.
+2. Keep up to date with the latest news of the User's choices.
+3. Be able to store the User's choices when he logs into the web host.
 
-each question is object.
-make the Start button work.
-If statement to make the answer work.
-timer and score later on.
+**What would be the foreseeable consequence of the needs if unmet?**
+- If we do not meet the aforementioned needs of the investors, then:
+1. The investors will not be supplied with the broad array of options, so they may make an informed and confident decision in engaging in cryptocurrency investment.
+2. We will not be able to inspire others to push our global interactions to the next step in history.
 
-
-**What problem are we solving?**
-
-
-**What would be the foreseeable consequences of the problem?**
-
-
-**What were your goals?**
-
+**What were our goals?**
+- Wire up two server-side APIs.
+- Construct a responsive UI.
+- Create an interactive UI(i.e. respond to User's input).
+- Use the client-side storage to store User's data object.
+- Use a CSS framework: Bootstrap, but do NOT use JS popup dialogue boxes (i.e. JS alerts, confirms, or prompts).
+- Exercise best coding practice.
+- Deploy a working application to GitHub Repo.
 
 **What have we done about it?**
+- Wire up two server-side APIs:
+    - **_Reddit and CoinGecko_**
+- Construct a responsive UI:
+    - **_Used Bootstrap_**
+- Create an interactive UI(i.e. respond to User's input):
+    - **_Used Bootstrap, JS, DOM_**
+- Use the client-side storage to store User's data object.
+    - **_Used localStorage_**
+- Use a CSS framework: Bootstrap, but do NOT use JS popup dialogue boxes (i.e. JS alerts, confirms, or prompts).
+    - **_Done_**
+- Exercise best coding practice.
+    - **_Done_**
+- Deploy a working application to GitHub Repo.
+    - **_Done_**
 
+#### Acceptance Criteria
 
-
-## Installation
-
+* GIVEN I am entering the web host,
+    * WHEN I sign up,
+        - THEN I am given a log-in data.
+    * WHEN I log in,
+        - THEN I am taken to my stored data.
+    * WHEN I search a stock,
+        - THEN I see current the stock price;
+        - THEN I see current Reddit news.
+    * WHEN I log out,
+        - THEN my activities are saved.
 
 
 ## Wireframe
 
 ![Screenshot of working website](...)
-
 
 
 ## Credits
@@ -92,11 +96,12 @@ timer and score later on.
 @Shiva S
 @Giovanni O
 @Sam K
-...and a little but of @Luca, but not much.
+
+**Honourable Mentions**
+Thanks to @Fil and @Luca B for their many guidances in this work.
 
 **Third Party Asset Attributions**
-
-
+https://getbootstrap.com/
 
 **Tutorials**
 https://www.w3schools.com/
@@ -133,12 +138,8 @@ SOFTWARE.
 ![BS](https://img.shields.io/badge/Bootstrap%205.0-Rebel-purple)
 ![JS](https://img.shields.io/badge/JavaScript-Strife-purple)
 ![DOM](https://img.shields.io/badge/DOM-Destiny-critical)
+![API](https://img.shields.io/badge/API-Reconciled-informational)
 ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)
-
-
-## Features
-
-No features.
 
 
 ## Contributing
