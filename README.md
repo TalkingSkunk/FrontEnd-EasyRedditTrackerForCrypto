@@ -10,9 +10,9 @@ https://github.com/Dragontalker/Reddit-Tracker-for-Cryto
 ## Table of Contents
 
 * [Description](#description)
-    * [User_Story] (##user_Story)
-    * [Features](##features)
-        * [Acceptance_Criteria] (###acceptance_Criteria)
+* [User_Story](#user_Story)
+* [Features](#features)
+* [Acceptance_Criteria](#acceptance_Criteria)
 * [Wireframe](#wireframe)
 * [Credits](#credits)
 * [License](#license)
@@ -23,11 +23,13 @@ https://github.com/Dragontalker/Reddit-Tracker-for-Cryto
 
 ## Description
 
+
 ### User_Story
 
 - You are an investor in cryptocurrency.
 - You need a web host where you can easily track my stocks investment.
 - With the web host, you will be able to store your investment info, and keep updated with latest news.
+
 
 ### Features
 
@@ -70,7 +72,8 @@ Under the changing global economic circumstances, we see a needs gap of many pot
 - Deploy a working application to GitHub Repo.
     - **_Done_**
 
-#### Acceptance Criteria
+
+### Acceptance_Criteria
 
 * GIVEN I am entering the web host,
     * WHEN I sign up,
