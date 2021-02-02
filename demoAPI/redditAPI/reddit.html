@@ -25,7 +25,16 @@
             <div id="serach" class="card card-body bg-light mb-2">
                 <h4>Search Reddit</h4>
                 <form id="search-form">
-                    <input id="search-input" class="form-control mb-3" type="text" placeholder="Search Term...">
+                    <div class="form-group">
+                        <input id="search-input" class="form-control mb-3" type="text" placeholder="Search Term...">
+                    </div>
+                    <div class="form-check form-check-inline">
+                        Sort By:
+                        <input class="form-check-input ml-2" type="radio" name="sortby" value="relevance" checked>
+                        <label class="form-check-label">
+                            Relevance
+                        </label>
+                    </div>
                 </form>
             </div>
         </div>
