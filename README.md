@@ -10,9 +10,9 @@ https://github.com/Dragontalker/Reddit-Tracker-for-Cryto
 ## Table of Contents
 
 * [Description](#description)
-    * [User_Story] (##user_Story)
-    * [Features](##features)
-        * [Acceptance_Criteria] (###acceptance_Criteria)
+* [User_Story](#user_Story)
+* [Features](#features)
+* [Acceptance_Criteria](#acceptance_Criteria)
 * [Wireframe](#wireframe)
 * [Credits](#credits)
 * [License](#license)
