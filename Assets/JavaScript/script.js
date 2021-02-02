@@ -35,16 +35,6 @@ class User {
   }
 }
 
-function showLogin() {
-  $(".firstSelection").addClass("d-none");
-  $(".login").removeClass("d-none");
-}
-
-function showRegister() {
-  $(".firstSelection").addClass("d-none");
-  $(".register").removeClass("d-none");
-}
-
 function loadPage() {
   if (localStorage.users) {
     users = JSON.parse(localStorage.users);
@@ -54,29 +44,29 @@ function loadPage() {
 function storeUser(name, password) {
   const newOne = new User(name, password);
   users.push(newOne);
-  console.log(users);
-  console.log(newOne);
   localStorage.users = JSON.stringify(users);
 }
 
-function newUser() {
+function newUser(e) {
+  e.preventDefault();
   const name = $(".createUsername").val();
   const password = $(".createPassword").val();
   console.log(name, password);
   if (name && password) {
     let check = checkUserName(name);
-    console.log(check);
     if (check) {
-      console.log(`checkUser is true`);
+      alert("UserName already taken!");
       return;
     } else {
-      console.log(`checkUser is false`);
       storeUser(name, password);
+      clearFIelds();
+      closeModal();
     }
   } else alert("insert a valid input");
 }
 
-function login() {
+function login(e) {
+  e.preventDefault();
   let username = $(".username").val();
   let password = $(".password").val();
   [currentUser] = users.filter(
@@ -84,8 +74,10 @@ function login() {
       el.password == password &&
       el.userName.toLowerCase() === username.toLowerCase()
   );
-  if (currentUser) console.log(`${currentUser.userName} just logged in`);
-  else alert("user not found");
+  if (currentUser) {
+    console.log(`${currentUser.userName} just logged in`);
+    clearFIelds();
+  } else alert("user not found");
 }
 
 function checkUserName(user) {
@@ -94,8 +86,17 @@ function checkUserName(user) {
   return check;
 }
 
+function clearFIelds() {
+  $(".username").val("");
+  $(".password").val("");
+  $(".createUsername").val("");
+  $(".createPassword").val("");
+}
+
+function closeModal() {
+  $("#exampleModal").modal("hide");
+}
+
 $(".loginBtn").on("click", login);
 $(".registerBtn").on("click", newUser);
-$(".registerBtnFirst").on("click", showRegister);
-$(".loginBtnFirst").on("click", showLogin);
 $(window).on("load", loadPage);
