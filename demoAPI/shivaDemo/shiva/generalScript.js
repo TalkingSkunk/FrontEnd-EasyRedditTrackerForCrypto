@@ -101,7 +101,6 @@ $(".loginBtn").on("click", login);
 $(".registerBtn").on("click", newUser);
 $(window).on("load", loadPage);
 
-
 function saveChanges(){
   let username = $(".createUsername").val();
   let password = $(".createPassword").val();
@@ -110,3 +109,120 @@ function saveChanges(){
   closeModal();
 
 }
+
+// Scripts for redditResults.html
+// Starts here,
+
+// Fetch function that returns a promise which contains the reddit data we want.
+const searchReddit = (searchTerm, searchLimit, sortBy) => {
+  return fetch(`https://www.reddit.com/search.json?q=${searchTerm}&sort=${sortBy}&limit=${searchLimit}`)
+  .then(response => response.json())
+  .then(data => data.data.children.map(data => data.data))
+  .catch(err => console.log(err));
+};
+
+// Helper function that is used to truncate the self text contained in reddit JSON data.
+function truncateText(text, limit) {
+  const shortened = text.indexOf(" ", limit);
+  if (shortened == -1) return text;
+  return text.substring(0, shortened);
+}
+
+// Assigning click event listener to cryto button 1, assumed to be bitcoin.
+const crypto1 = "bitcoin";
+const searchLimit = 15;
+
+let crypto1Btn = document.getElementById('crypto1Btn');
+crypto1Btn.addEventListener('click', event => {
+  searchReddit(crypto1, searchLimit, "latest")
+  .then(results => {
+        let output = '';
+        // Loop through posts
+        results.forEach(post => {
+            // Check for image
+            const img = post.preview ? post.preview.images[0].source.url : 
+            'https://cdn.comparitech.com/wp-content/uploads/2017/08/reddit-1.jpg'
+             
+            output  += `
+            <div class="col-md-4 col-sm-6" >
+                  <div class="card card-block">
+                    <img src=${img} alt="Photo of sunset">
+                    <h5 class="card-title mt-3 mb-3">${post.title}</h5>
+
+                    <a href="${post.url}" class="btn btn-primary">Read more</a>
+                 </div>
+                
+            </div>
+            `;
+        });
+        document.getElementById('results').innerHTML = output;
+    });
+
+    event.preventDefault();
+});
+
+// Assigning click event listener to cryto button 2, assumed to be ethereum.
+const crypto2 = "ethereum";
+
+let crypto2Btn = document.getElementById('crypto2Btn');
+crypto2Btn.addEventListener('click', event => {
+  searchReddit(crypto2, searchLimit, "latest")
+  .then(results => {
+        let output = '';
+        // Loop through posts
+        results.forEach(post => {
+            // Check for image
+            const img = post.preview ? post.preview.images[0].source.url : 
+            'https://cdn.comparitech.com/wp-content/uploads/2017/08/reddit-1.jpg'
+
+            output  += `
+            <div class="col-md-4 col-sm-6" >
+                  <div class="card card-block">
+                    <img src=${img} alt="Photo of sunset">
+                    <h5 class="card-title mt-3 mb-3">${post.title}</h5>
+
+                    <a href="${post.url}" class="btn btn-primary">Read more</a>
+                 </div>
+                
+            </div>
+            `;
+        });
+        document.getElementById('results').innerHTML = output;
+    });
+
+    event.preventDefault();
+});
+
+// Assigning click event listener to cryto button 1, assumed to be bitcoin.
+const crypto3 = "tether";
+
+let crypto3Btn = document.getElementById('crypto3Btn');
+crypto3Btn.addEventListener('click', event => {
+  searchReddit(crypto3, searchLimit, "latest")
+  .then(results => {
+        let output = '';
+        // Loop through posts
+        results.forEach(post => {
+            // Check for image
+            const img = post.preview ? post.preview.images[0].source.url : 
+            'https://cdn.comparitech.com/wp-content/uploads/2017/08/reddit-1.jpg'
+
+            output  += `
+            <div class="col-md-4 col-sm-6" >
+            <div class="card card-block">
+              <img src=${img} alt="Photo of sunset">
+              <h5 class="card-title mt-3 mb-3">${post.title}</h5>
+
+              <a href="${post.url}" class="btn btn-primary">Read more</a>
+           </div>
+          
+      </div>
+            `;
+        });
+        document.getElementById('results').innerHTML = output;
+    });
+
+    event.preventDefault();
+});
+
+// Ends here.
