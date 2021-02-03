@@ -1,0 +1,33 @@
+img {
+  border: 1px solid black;
+  height: 100px;
+  width: auto;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 35px;
+  margin-left: 15px;
+}
+
+#max {
+  color: green;
+}
+
+#min {
+  color: red;
+}
+
+.values {
+  margin-left: 15px;
+}
+
+.displayCrypto {
+  display: none;
+  border: 1px solid black;
+}
+
+.cryptoItem {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
