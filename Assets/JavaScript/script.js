@@ -142,7 +142,7 @@ crypto1Btn.addEventListener('click', event => {
             // Check for image
             const img = post.preview ? post.preview.images[0].source.url : 
             'https://cdn.comparitech.com/wp-content/uploads/2017/08/reddit-1.jpg'
-
+             
             output  += `
             <div class="col-8 card border-dark mb-3" style="max-width: 30rem;">
                 <img src="${img}" class="card-img-top" alt="Card image cap">
