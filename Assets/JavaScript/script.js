@@ -102,6 +102,16 @@ $(".registerBtn").on("click", newUser);
 $(window).on("load", loadPage);
 
 
+<<<<<<< HEAD
+function saveChanges(){
+  let username = $(".createUsername").val();
+  let password = $(".createPassword").val();
+  console.log(username, password);
+  clearFIelds();
+  closeModal();
+
+}
+=======
 // Scripts for redditResults.html
 // Starts here,
 
@@ -218,3 +228,4 @@ crypto3Btn.addEventListener('click', event => {
 });
 
 // Ends here.
+>>>>>>> 0063ebf33ecf46eca8c14ee2c093faa876642613

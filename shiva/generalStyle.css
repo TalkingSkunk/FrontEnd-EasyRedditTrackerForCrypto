@@ -168,7 +168,6 @@ a.socialIcon:hover,
     transition: all 0.8s
 }
 
-<<<<<<< HEAD
 /* search bar style */
 .padding {
     padding: 10rem !important
@@ -264,17 +263,3 @@ a.socialIcon:hover,
     
   }
 }
-=======
-/* Styles for redditLogin.html */
-/* Starts herer, */
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-/* Ends here. */
->>>>>>> 0063ebf33ecf46eca8c14ee2c093faa876642613
