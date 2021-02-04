@@ -1,8 +1,8 @@
-img {
+/* img {
   border: 1px solid black;
   height: 100px;
   width: auto;
-}
+} */
 
 .name {
   font-weight: bold;
@@ -26,12 +26,20 @@ img {
   margin-left: 15px;
 }
 
-.displayCrypto {
+/* .displayCrypto {
   display: none;
   border: 1px solid black;
-}
+} */
 
 .cryptoItem {
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+#green {
+  color: green;
+}
+
+#red {
+  color: red;
 }
