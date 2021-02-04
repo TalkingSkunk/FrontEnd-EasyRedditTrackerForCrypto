@@ -18,6 +18,10 @@ img {
   color: red;
 }
 
+#percent {
+  color: blueviolet;
+}
+
 .values {
   margin-left: 15px;
 }
