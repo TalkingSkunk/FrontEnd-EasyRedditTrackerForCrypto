@@ -151,7 +151,6 @@ crypto1Btn.addEventListener('click', event => {
 
                     <a href="${post.url}" class="btn btn-primary">Read more</a>
                  </div>
-                
             </div>
             `;
         });
@@ -180,10 +179,8 @@ crypto2Btn.addEventListener('click', event => {
                   <div class="card card-block">
                     <img src=${img} alt="Photo of sunset">
                     <h5 class="card-title mt-3 mb-3">${post.title}</h5>
-
                     <a href="${post.url}" class="btn btn-primary">Read more</a>
-                 </div>
-                
+                 </div>  
             </div>
             `;
         });

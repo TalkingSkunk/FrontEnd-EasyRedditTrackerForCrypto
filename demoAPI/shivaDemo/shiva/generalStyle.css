@@ -3,8 +3,8 @@ body {
     padding: 0;
     font-family: sans-serif;
     background: linear-gradient(to right, #e0feff, #1565c0)
-}
-
+  }
+  
 .box {
     width: 500px;
     padding: 40px;
@@ -156,7 +156,7 @@ a.socialIcon:hover,
     text-align: center
 }
 
-.social-circle li a:hover i,
+.social-circle li i:hover i,
 .triggeredHover {
     transform: rotate(360deg);
     transition: all 0.2s
@@ -234,7 +234,7 @@ a.socialIcon:hover,
         border-color: #2ecc71
     }
 
-    modal-body input[type="text"], .modal-body input[type="password"] {
+    .modal-body input[type="text"], .modal-body input[type="password"] {
          width: 250px;      
     }
     .modal-body input[type="text"], .modal-body input[type="password"] {
@@ -265,6 +265,15 @@ a.socialIcon:hover,
   }
 }
 /* Navbar Style */
+.navbar{
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:6px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0 0 0);
+    font-size: large;
+}
 
 .bg-light {
     background: linear-gradient(to right, #91cde4, #012753)
