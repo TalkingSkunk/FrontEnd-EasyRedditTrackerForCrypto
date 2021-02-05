@@ -4,6 +4,22 @@ body {
     font-family: sans-serif;
     background: linear-gradient(to right, #FF5700, #8dc647)
   }
+
+.redditOrange {
+    color: #FF5700;
+}
+
+.geckoGreen {
+    color: #8dc647;
+}
+
+.priceUp {
+    color: green;
+}
+
+.priceDown {
+    color: red;
+}
   
 .box {
     width: 500px;
