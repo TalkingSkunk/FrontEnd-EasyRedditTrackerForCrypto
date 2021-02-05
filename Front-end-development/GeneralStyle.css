@@ -331,7 +331,7 @@ a.socialIcon:hover,
     padding: 3rem 0 7rem;
     position: relative;
     background-color: #dd3d31;
-    background-image: url(https://startbootstrap.com/assets/img/overlay.svg), linear-gradient(  #0a2d4e 0%, #d22f23 100%);
+    background-image: linear-gradient(  #0a2d4e 0%, #d22f23 100%);
     background-size: cover;
     z-index: 0
 }
