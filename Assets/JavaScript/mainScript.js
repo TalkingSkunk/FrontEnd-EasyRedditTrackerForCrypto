@@ -1,7 +1,7 @@
 // Feature: Initializing a new data base.
 // Starts here
 var cryptoDB = {};
-var cryptoList = ['bitcoin', 'ethereum', 'tether', 'polkadot', 'cardano', 'litecoin', 'chainlink'];
+var cryptoList = ['bitcoin', 'ethereum', 'tether'];
     
 for (let i = 0; i < cryptoList.length; i++) {
     cryptoDB[cryptoList[i]] = {
@@ -42,8 +42,6 @@ async function getDataCrypto(crypto) {
     cryptoObj.percentChange = result.price_change_percentage_24h.toFixed(2);
     cryptoObj.lastUpdated = result.last_updated;
 };
-
-cryptoList.forEach(coin => getDataCrypto(coin));
 // End here
 
 // Reddit API call
@@ -73,30 +71,89 @@ const getDataReddit = (crypto) => {
         }
     });
 };
-
-cryptoList.forEach(coin => getDataReddit(coin));
 // End here
 
 // Create a reddit pool from data object.
 // Start here
-var redditPool = [];
 
-const pushToPool = (crypto) => {
-    let cryptoObj = cryptoDB[crypto];
-    for (let i = 0; i < 100; i++) {
-        let redditObj = cryptoObj[`reddit${i+1}`];
-        let newObj = {};
-        newObj.name = cryptoObj.name;
-        newObj.icon = cryptoObj.image;
-        newObj.date = cryptoObj.lastUpdated;
-        newObj.priceChange = cryptoObj.priceChange;
-        newObj.percentChange = cryptoObj.percentChange;
-        newObj.title = redditObj.title;
-        newObj.url = redditObj.url;
-        redditPool.push(newObj);
-    }
+const randomReddit = () => {
+    let name = cryptoList[Math.floor(Math.random() * 3)];
+    let cryptoObj = cryptoDB[name];
+    let redditObj = cryptoObj[`reddit${Math.floor(Math.random() * 100)}`];
+
+    console.log(cryptoObj);
+    console.log(redditObj);
+
+    console.log(cryptoObj.priceChange);
+    console.log(cryptoObj.percentChange);
+    console.log(cryptoObj.image);
+    console.log(cryptoObj.name);
+    console.log(redditObj.title);
+    console.log(cryptoObj.lastUpdated);
+
+    
+    let redditArea = document.getElementById("reddits");
+    let colorClass = cryptoObj.percentChange < 0 ? "priceDown" : "priceUp";
+    let symbolClass = cryptoObj.percentChange < 0 ? "-" : "+";
+    redditArea.innerHTML += `
+    <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="${cryptoObj.image}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title ${colorClass}">${symbolClass}$${cryptoObj.priceChange}  (${symbolClass}${cryptoObj.percentChange}%)</h5>
+                    <p class="card-text redditOrange">${redditObj.title}</p>
+                    <p class="card-text"><small class="text-muted">Last updated ${cryptoObj.lastUpdated}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
 }
-
-
-cryptoList.forEach(coin => pushToPool(coin));
+// }
 // End here
+
+// Call API and collect all data.
+// Start here
+const makePool = async () => {
+    await getDataCrypto('bitcoin');
+    await getDataCrypto('ethereum');
+    await getDataCrypto('tether');
+    getDataReddit('bitcoin');
+    getDataReddit('ethereum');
+    getDataReddit('tether');
+    // await pushToPool('bitcoin');
+    // await pushToPool('ethereum');
+    // await pushToPool('tether');
+}
+// End here
+
+// Feature: generating live update from main page:
+// const livingUpdate = () => {
+//     let redditArea = document.getElementById("reddits");
+//     let randomReddit = redditPool[Math.floor(Math.random() * redditPool.length)];
+//     let colorClass = randomReddit.percentChange < 0 ? "priceDown" : "priceUp";
+//     redditArea.innerHTML += `
+//     <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
+//         <div class="row no-gutters">
+//             <div class="col-md-4">
+//                 <img src="${randomReddit.icon}" class="card-img" alt="...">
+//                 </div>
+//                 <div class="col-md-8">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${randomReddit.name}</h5>
+//                     <p class="card-text">${randomReddit.title}</p>
+//                     <p class="card-text"><small class="text-muted">Last updated ${randomReddit.date}</small></p>
+//                 </div>
+//             </div>
+//         </div>
+//     </div>
+//     `
+// };
+
+makePool();
+
+setTimeout(setInterval(randomReddit, 2000), 3000);
+
