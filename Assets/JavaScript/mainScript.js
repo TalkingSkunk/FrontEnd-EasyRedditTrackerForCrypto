@@ -96,16 +96,18 @@ const randomReddit = () => {
     let colorClass = cryptoObj.percentChange < 0 ? "priceDown" : "priceUp";
     let symbolClass = cryptoObj.percentChange < 0 ? "-" : "+";
     redditArea.innerHTML += `
-    <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-                <img src="${cryptoObj.image}" class="card-img" alt="...">
-                </div>
-                <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title ${colorClass}">${symbolClass}$${cryptoObj.priceChange}  (${symbolClass}${cryptoObj.percentChange}%)</h5>
-                    <p class="card-text redditOrange">${redditObj.title}</p>
-                    <p class="card-text"><small class="text-muted">Last updated ${cryptoObj.lastUpdated}</small></p>
+    <div class="col-lg-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="${cryptoObj.image}" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title ${colorClass}">${symbolClass}$${cryptoObj.priceChange}  (${symbolClass}${cryptoObj.percentChange}%)</h5>
+                        <p class="card-text redditOrange">${redditObj.title}</p>
+                        <p class="card-text"><small class="text-muted">Last updated ${cryptoObj.lastUpdated}</small></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,5 +157,19 @@ const makePool = async () => {
 
 makePool();
 
-setTimeout(setInterval(randomReddit, 2000), 3000);
+const updateReddit = () => {
+    let redditArea = document.getElementById("reddits");
+    redditArea.innerHTML = "";
+    randomReddit();
+    randomReddit();
+    randomReddit();
+    randomReddit();
+    randomReddit();
+    randomReddit();
+    randomReddit();
+    randomReddit();
+    randomReddit();
+}
+
+setTimeout(setInterval(updateReddit, 5000), 6000);
 
