@@ -76,3 +76,8 @@ const getDataReddit = (crypto) => {
 
 cryptoList.forEach(coin => getDataReddit(coin));
 // End here
+
+// Create a reddit pool from data object.
+// Start here
+
+// End here
