@@ -18,7 +18,6 @@ for (let i = 0; i < cryptoList.length; i++) {
 const emptyReddits = (coin) => {
     for (let i = 0; i < 100; i++) {
         cryptoDB[coin][`reddit${i+1}`] = {
-            name: "",
             title: "",
             url: ""
         }
@@ -47,3 +46,33 @@ async function getDataCrypto(crypto) {
 cryptoList.forEach(coin => getDataCrypto(coin));
 // End here
 
+// Reddit API call
+// Start here
+const searchReddit = (crypto, searchLimit, sortBy) => {
+    return fetch(`https://www.reddit.com/search.json?q=${crypto}&sort=${sortBy}&limit=${searchLimit}`)
+    .then(response => response.json())
+    .then(data => data.data.children.map(data => data.data))
+    .catch(err => console.log(err));
+};
+
+const truncateText = (text, limit) => {
+    const shortened = text.indexOf(" ", limit);
+    if (shortened == -1) return text;
+    return text.substring(0, shortened);
+}
+
+const getDataReddit = (crypto) => {
+    searchReddit(crypto, 100, 'latest').then
+    (results => {
+        let cryptoObj = cryptoDB[crypto];
+        for (let i = 0; i < results.length; i++) {
+            let data = results[i];
+            let redditObj = cryptoObj[`reddit${i+1}`];
+            redditObj.title = data.title;
+            redditObj.url = data.url;
+        }
+    });
+};
+
+cryptoList.forEach(coin => getDataReddit(coin));
+// End here
