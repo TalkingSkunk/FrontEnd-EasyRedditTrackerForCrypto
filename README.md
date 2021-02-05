@@ -94,11 +94,11 @@ Under the changing global economic circumstances, we see a needs gap of many pot
 
 ## Credits
 
-@Richard Y
-@Max H
-@Shiva S
-@Giovanni O
-@Sam K
+* Scrum Master/Full Stack Developer - Richard Y
+* Product Manager/Full Stack Developer - Sam K
+* UI Designer/Front End Developer - Shiva S
+* Back End Developer - Giovanni O
+* DevOps - Max H
 
 **Honourable Mentions**
 Thanks to @Fil and @Luca B for their many guidances in this work.
