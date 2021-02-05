@@ -1,10 +1,10 @@
 # Reddit-Tracker-for-Crypto
 
 **Deployed application URL**
-https://NEEDS-UPDATE (NEED TO BE CHANGED)
+https://dragontalker.github.io/FrontEnd-EasyRedditTrackerForCrypto/
 
 **GitHub Repository URL**
-https://github.com/Dragontalker/Reddit-Tracker-for-Cryto
+https://github.com/Dragontalker/FrontEnd-EasyRedditTrackerForCrypto
 
 
 ## Table of Contents
