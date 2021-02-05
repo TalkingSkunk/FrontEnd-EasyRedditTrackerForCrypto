@@ -79,5 +79,24 @@ cryptoList.forEach(coin => getDataReddit(coin));
 
 // Create a reddit pool from data object.
 // Start here
+var redditPool = [];
 
+const pushToPool = (crypto) => {
+    let cryptoObj = cryptoDB[crypto];
+    for (let i = 0; i < 100; i++) {
+        let redditObj = cryptoObj[`reddit${i+1}`];
+        let newObj = {};
+        newObj.name = cryptoObj.name;
+        newObj.icon = cryptoObj.image;
+        newObj.date = cryptoObj.lastUpdated;
+        newObj.priceChange = cryptoObj.priceChange;
+        newObj.percentChange = cryptoObj.percentChange;
+        newObj.title = redditObj.title;
+        newObj.url = redditObj.url;
+        redditPool.push(newObj);
+    }
+}
+
+
+cryptoList.forEach(coin => pushToPool(coin));
 // End here
