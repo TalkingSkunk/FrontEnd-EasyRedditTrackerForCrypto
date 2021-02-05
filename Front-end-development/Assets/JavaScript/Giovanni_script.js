@@ -72,6 +72,8 @@ function newUser(e) {
     }
   } else alert("Please insert a valid input");
 }
+
+// alert("test");
 //////LOGIN LOGIC
 function login(e) {
   e.preventDefault();
@@ -87,7 +89,8 @@ function login(e) {
     onlineNow = currentUser;
     localStorage.setItem("onlineNow", JSON.stringify(onlineNow));
     clearFIelds();
-    window.location.assign("redditResults.html");
+    window.location.assign("Reddit.html");
+    $(".userName").html(currentUser.userName);
   } else alert("User not found");
 }
 /////////////
@@ -128,7 +131,7 @@ function logOut(e) {
   window.location.assign("login.html");
 }
 
-$("#logoutBtn").on("click", logOut);
+$(".logoutBtn").on("click", logOut);
 // Scripts for redditResults.html
 // Starts here,
 
