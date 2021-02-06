@@ -1,7 +1,7 @@
 // Feature: Initializing a new data base.
 // Starts here
 var cryptoDB = {};
-var cryptoList = ['bitcoin', 'ethereum', 'tether'];
+var cryptoList = ['bitcoin', 'ethereum', 'tether', 'polkadot', 'litecoin'];
     
 for (let i = 0; i < cryptoList.length; i++) {
     cryptoDB[cryptoList[i]] = {
@@ -77,7 +77,7 @@ const getDataReddit = (crypto) => {
 // Start here
 
 const randomReddit = () => {
-    let name = cryptoList[Math.floor(Math.random() * 3)];
+    let name = cryptoList[Math.floor(Math.random() * 5)];
     let cryptoObj = cryptoDB[name];
     let redditObj = cryptoObj[`reddit${Math.floor(Math.random() * 100)}`];
 
@@ -96,7 +96,7 @@ const randomReddit = () => {
     let colorClass = cryptoObj.percentChange < 0 ? "priceDown" : "priceUp";
     let symbolClass = cryptoObj.percentChange < 0 ? "-" : "+";
     redditArea.innerHTML += `
-    <div class="col-lg-4">
+    <div class="col-lg-4 col-md-6">
         <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
@@ -115,7 +115,7 @@ const randomReddit = () => {
     `
 }
 // }
-// End here
+// End here 
 
 // Call API and collect all data.
 // Start here
@@ -123,9 +123,14 @@ const makePool = async () => {
     await getDataCrypto('bitcoin');
     await getDataCrypto('ethereum');
     await getDataCrypto('tether');
+    await getDataCrypto('polkadot');
+    await getDataCrypto('litecoin');
+    getDataReddit('bitcoin');
     getDataReddit('bitcoin');
     getDataReddit('ethereum');
     getDataReddit('tether');
+    getDataReddit('polkadot');
+    getDataReddit('litecoin');
     // await pushToPool('bitcoin');
     // await pushToPool('ethereum');
     // await pushToPool('tether');
