@@ -171,9 +171,6 @@ const updateReddit = () => {
     randomReddit();
     randomReddit();
     randomReddit();
-    randomReddit();
-    randomReddit();
-    randomReddit();
 }
 
 setTimeout(setInterval(updateReddit, 5000), 6000);
