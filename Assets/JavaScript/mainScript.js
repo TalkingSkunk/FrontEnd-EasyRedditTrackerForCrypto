@@ -16,7 +16,7 @@ for (let i = 0; i < cryptoList.length; i++) {
 }
 
 const emptyReddits = (coin) => {
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 25; i++) {
         cryptoDB[coin][`reddit${i+1}`] = {
             title: "",
             url: ""
@@ -60,7 +60,7 @@ const truncateText = (text, limit) => {
 }
 
 const getDataReddit = (crypto) => {
-    searchReddit(crypto, 100, 'latest').then
+    searchReddit(crypto, 25, 'latest').then
     (results => {
         let cryptoObj = cryptoDB[crypto];
         for (let i = 0; i < results.length; i++) {
@@ -79,7 +79,7 @@ const getDataReddit = (crypto) => {
 const randomReddit = () => {
     let name = cryptoList[Math.floor(Math.random() * 5)];
     let cryptoObj = cryptoDB[name];
-    let redditObj = cryptoObj[`reddit${Math.floor(Math.random() * 100)}`];
+    let redditObj = cryptoObj[`reddit${Math.floor(Math.random() * 25)}`];
 
     console.log(cryptoObj);
     console.log(redditObj);
@@ -131,34 +131,8 @@ const makePool = async () => {
     getDataReddit('tether');
     getDataReddit('polkadot');
     getDataReddit('litecoin');
-    // await pushToPool('bitcoin');
-    // await pushToPool('ethereum');
-    // await pushToPool('tether');
 }
 // End here
-
-// Feature: generating live update from main page:
-// const livingUpdate = () => {
-//     let redditArea = document.getElementById("reddits");
-//     let randomReddit = redditPool[Math.floor(Math.random() * redditPool.length)];
-//     let colorClass = randomReddit.percentChange < 0 ? "priceDown" : "priceUp";
-//     redditArea.innerHTML += `
-//     <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
-//         <div class="row no-gutters">
-//             <div class="col-md-4">
-//                 <img src="${randomReddit.icon}" class="card-img" alt="...">
-//                 </div>
-//                 <div class="col-md-8">
-//                 <div class="card-body">
-//                     <h5 class="card-title">${randomReddit.name}</h5>
-//                     <p class="card-text">${randomReddit.title}</p>
-//                     <p class="card-text"><small class="text-muted">Last updated ${randomReddit.date}</small></p>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     `
-// };
 
 makePool();
 
