@@ -83,40 +83,35 @@ Under the changing global economic circumstances, we see a needs gap of many pot
     * WHEN I sign up,
         - THEN I am given a log-in data.
     * WHEN I log in,
-        - THEN I am taken to my stored data.
-    * WHEN I search a stock,
-        - THEN I see current the stock price;
-        - THEN I see current Reddit news.
-    * WHEN I log out,
-        - THEN my activities are saved.
+        - THEN I am presented with a board with reddit stickers.
+    * WHEN I click on Reddit link in nav bar,
+        - THEN I am redirected to Reddit to see more about crypto currency;
+    * WHEN I click on GoingEcko link in nav bar,
+        - THEN I am redirected to GoingEcko to see more price index.
 
-
-## Wireframe
-
-![Screenshot of working website](...)
 
 
 ## Credits
 
 #### Product Owner
-Full Stack Developer - Sam K
+*Full Stack Developer - Sam K*
 Contact Him on GitHub: https://github.com/TalkingSkunk
 
 #### Scrum Master
-Full Stack Developer - Richard Y
+*Full Stack Developer - Richard Y*
 Contact Him on GitHub: https://github.com/Dragontalker
 
 
 #### Scrum Team
 ##### UI-UX Designer
-Front End Developer - Shiva S
+*Front End Developer - Shiva S*
 Contact Her on GitHub: https://github.com/shiva-shiva
 
 ##### API and data related
-Back End Developer - Giovanni O
+*Back End Developer - Giovanni O*
 Contact Him on GitHub: https://github.com/Gio86krt
 
-DevOps - Max H
+*DevOps - Max H*
 Contact Him on GitHub: https://github.com/Simplyloveall
 
 **Honourable Mentions**
