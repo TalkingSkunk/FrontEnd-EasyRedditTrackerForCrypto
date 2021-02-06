@@ -161,8 +161,4 @@ SOFTWARE.
 [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
 
 
-## Tests
-
-No tests required for our application. No examples provided to run tests.
-
 &copy; 2021 Team-Force
