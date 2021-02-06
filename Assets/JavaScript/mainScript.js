@@ -100,7 +100,7 @@ const randomReddit = () => {
         <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="${cryptoObj.image}" class="card-img" alt="...">
+                    <img src="${cryptoObj.image}" class="card-img p-4" alt="...">
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
