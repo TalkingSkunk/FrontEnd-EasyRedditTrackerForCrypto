@@ -26,7 +26,7 @@ https://github.com/Dragontalker/FrontEnd-EasyRedditTrackerForCrypto
 
 
 ## Description
-
+RedditEcko! is a response web app that automatically pushes Reddit news feed on on crypto currencies. Once the user logged in, he is presented with a sticker board which has 6 automatically updating stickers. Each sticker includes a type of crypto currency, its price information in the past 24 hours and a relevant Reddit about it. By combing price information and Reddit post, RedditEcko! gives the user a cut-edge adavange in information gathering for crypto currency.
 
 ### User_Story
 
