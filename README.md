@@ -1,4 +1,5 @@
-# RedditGecko! A smart tracker for cypto lovers and reddit fans!
+# RedditGecko! 
+### - A smart tracker for cypto lovers and reddit fans!
 
 **Deployed application URL**
 https://dragontalker.github.io/FrontEnd-EasyRedditTrackerForCrypto/
