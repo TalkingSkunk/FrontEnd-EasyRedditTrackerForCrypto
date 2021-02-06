@@ -6,6 +6,10 @@ https://dragontalker.github.io/FrontEnd-EasyRedditTrackerForCrypto/
 **GitHub Repository URL**
 https://github.com/Dragontalker/FrontEnd-EasyRedditTrackerForCrypto
 
+## Screenshot
+
+![redditecko screenshot](./Assets/Image/screenshot.png)
+
 
 ## Table of Contents
 
