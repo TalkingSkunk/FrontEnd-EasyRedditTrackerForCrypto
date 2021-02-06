@@ -136,6 +136,7 @@ const searchLimit = 15;
 
 let crypto1Btn = document.querySelector('.crypto1Btn');
 crypto1Btn.addEventListener('click', event => {
+  
   searchReddit(crypto1, searchLimit, "latest")
   .then(results => {
         let output = '';
@@ -145,13 +146,13 @@ crypto1Btn.addEventListener('click', event => {
             const img = post.preview ? post.preview.images[0].source.url : 
             'https://cdn.comparitech.com/wp-content/uploads/2017/08/reddit-1.jpg'
             output  += `
-            <div class="col-md-4 col-sm-6" >
-                  <div class="card card-block">
-                    <img src=${img} alt="Photo of sunset">
-                    <h5 class="card-title mt-3 mb-3">${post.title}</h5>
-                    <a href="${post.url}" class="btn btn-primary">Read more</a>
-                 </div>
-            </div>
+              <div class="col-md-4 col-sm-6" >
+                    <div class="card card-block">
+                      <img src=${img} alt="Photo of sunset">
+                      <h5 class="card-title mt-3 mb-3">${post.title}</h5>
+                      <a href="${post.url}" class="btn btn-primary">Read more</a>
+                  </div>
+              </div>
             `;
         });
         document.getElementById('results').innerHTML = output;
