@@ -1,4 +1,4 @@
-# Reddit-Tracker-for-Crypto
+# RedditGecko! A smart tracker for cypto lovers and reddit fans!
 
 **Deployed application URL**
 https://dragontalker.github.io/FrontEnd-EasyRedditTrackerForCrypto/
@@ -26,25 +26,22 @@ https://github.com/Dragontalker/FrontEnd-EasyRedditTrackerForCrypto
 
 
 ## Description
-RedditEcko! is a response web app that automatically pushes Reddit news feed on on crypto currencies. Once the user logged in, he is presented with a sticker board which has 6 automatically updating stickers. Each sticker includes a type of crypto currency, its price information in the past 24 hours and a relevant Reddit about it. By combing price information and Reddit post, RedditEcko! gives the user a cut-edge adavange in information gathering for crypto currency.
+RedditGecko! is a response web app that automatically pushes Reddit news feed on on crypto currencies. Once the user logged in, he is presented with a sticker board which has 6 automatically updating stickers. Each sticker includes a type of crypto currency, its price information in the past 24 hours and a relevant Reddit about it. By combing price information and Reddit post, RedditEcko! gives the user a cut-edge adavange in information gathering for crypto currency.
 
 ### User_Story
 
 - You are an investor in cryptocurrency.
-- You need a web host where you can easily track my stocks investment.
-- With the web host, you will be able to store your investment info, and keep updated with latest news.
+- You need a web host where you can easily track my crypto currency investment.
+- With the web host, you will be able to store your investment info, and keep updated with latest related Reddit posts.
 
 
 ### Features
 
 **What needs are we meeting?**
-- From the beginning, the system of how we buy and sell goods has always been changing.
-With the advent of technological advancements, our society is changing rapidly. This change could and probably will include our world's current currency system.
-With the looming changes, the investors have shown growing interest in the future of the currency system.
-Under the changing global economic circumstances, we see a needs gap of many potential investors. We want to meet their needs, so that they may:
-1. Be able to search the current stocks prices of User's choice of cryptocurrency.
-2. Keep up to date with the latest news of the User's choices.
-3. Be able to store the User's choices when he logs into the web host.
+- Information is probablly the most valuable resource to crypto currency investor nowdays. Among all the new different information sharing platforms, Reddit is the most popular one. However, the nature of Reddit doesn't give the user options to quickly peak into the information. Moreover, switching between price index sites and Reddit page can be pain when user is trying to track multiple crypto currencies. With RedditGecko!, we want to deliver a integrated experience that:
+
+1. Display the crucial price information together with the Reddit post.
+2. Automatically refresh and generate new Reddit posts to keep user update to market movement.
 
 **What would be the foreseeable consequence of the needs if unmet?**
 - If we do not meet the aforementioned needs of the investors, then:
