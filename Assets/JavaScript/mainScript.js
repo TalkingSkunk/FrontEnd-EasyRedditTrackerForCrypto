@@ -94,7 +94,7 @@ const randomReddit = () => {
     
     let redditArea = document.getElementById("reddits");
     let colorClass = cryptoObj.percentChange < 0 ? "priceDown" : "priceUp";
-    let symbolClass = cryptoObj.percentChange < 0 ? "-" : "+";
+    let symbolClass = cryptoObj.percentChange < 0 ? "" : "+";
     redditArea.innerHTML += `
     <div class="col-lg-4 col-md-6">
         <div class="card text-white bg-dark mb-3" style="max-width: 400px;">
