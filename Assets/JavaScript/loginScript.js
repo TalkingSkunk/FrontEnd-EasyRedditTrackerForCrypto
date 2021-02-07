@@ -87,7 +87,7 @@ function login(e) {
     onlineNow = currentUser;
     localStorage.setItem("onlineNow", JSON.stringify(onlineNow));
     clearFIelds();
-    window.location.assign("index.html");
+    window.location.assign("home.html");
   } else alert("User not found!");
 }
 /////////////
@@ -125,7 +125,7 @@ function logOut(e) {
   e.preventDefault();
   onlineNow = {};
   localStorage.removeItem("onlineNow");
-  window.location.assign("login.html");
+  window.location.assign("index.html");
 }
 
 $("#logoutBtn").on("click", logOut);
