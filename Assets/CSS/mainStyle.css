@@ -5,6 +5,13 @@ body {
   background: linear-gradient(to right, #ff5700, #8dc647);
 }
 
+.background::before {
+  width: 1500px;
+  height: 1500px;
+  background: linear-gradient(to right, #ff5700, #8dc647);
+  z-index: -1;
+}
+
 a:link {
   color: #ff5700;
 }
@@ -119,6 +126,10 @@ a:link {
   background: #2ecc71;
 }
 
+.box input[type="button"]:hover {
+  background: #2ecc71;
+}
+
 .forgot {
   text-decoration: underline;
   display: block;
@@ -180,8 +191,8 @@ a.socialIcon:hover,
   text-align: center;
 }
 
-.social-circle li i:hover i,
-.triggeredHover {
+/* .social-circle li i:hover i, */
+i:hover i .triggeredHover {
   transform: rotate(360deg);
   transition: all 0.2s;
 }
