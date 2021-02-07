@@ -82,15 +82,21 @@ const randomReddit = () => {
   let cryptoObj = cryptoDB[name];
   let redditObj = cryptoObj[`reddit${Math.floor(Math.random() * 25)}`];
 
-  console.log(cryptoObj);
-  console.log(redditObj);
+  //   console.log(cryptoObj);
+  //   console.log(redditObj);
 
-  console.log(cryptoObj.priceChange);
-  console.log(cryptoObj.percentChange);
-  console.log(cryptoObj.image);
-  console.log(cryptoObj.name);
-  console.log(redditObj.title);
-  console.log(cryptoObj.lastUpdated);
+  //   console.log(cryptoObj.priceChange);
+  //   console.log(cryptoObj.percentChange);
+  //   console.log(cryptoObj.image);
+  //   console.log(cryptoObj.name);
+  //   console.log(redditObj.title);
+  //   console.log(cryptoObj.lastUpdated);
+  ////parse last updated
+  let date = cryptoObj.lastUpdated.split("T");
+  dateDisplay = date[0];
+  let time = date[1];
+  time = time.slice(0, 5);
+  //   console.log(date, time);
 
   let redditArea = document.getElementById("reddits");
   let colorClass = cryptoObj.percentChange < 0 ? "priceDown" : "priceUp";
@@ -106,7 +112,7 @@ const randomReddit = () => {
                     <div class="card-body">
                         <h5 class="card-title ${colorClass}">${symbolClass}$${cryptoObj.priceChange}  (${symbolClass}${cryptoObj.percentChange}%)</h5>
                         <p class="card-text redditOrange">${redditObj.title}</p>
-                        <p class="card-text"><small class="text-muted">Last updated ${cryptoObj.lastUpdated}</small></p>
+                        <p class="card-text"><small class="text-muted">Last updated ${dateDisplay} at: ${time}</small></p>
                     </div>
                 </div>
             </div>

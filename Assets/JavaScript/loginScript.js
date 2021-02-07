@@ -70,7 +70,7 @@ function newUser(e) {
       clearFIelds();
       closeModal();
     }
-  } else alert("Please insert a valid input");
+  } else alert("Please insert a valid input!");
 }
 //////LOGIN LOGIC
 function login(e) {
@@ -88,7 +88,7 @@ function login(e) {
     localStorage.setItem("onlineNow", JSON.stringify(onlineNow));
     clearFIelds();
     window.location.assign("index.html");
-  } else alert("User not found");
+  } else alert("User not found!");
 }
 /////////////
 function checkUserName(user) {
@@ -129,3 +129,45 @@ function logOut(e) {
 }
 
 $("#logoutBtn").on("click", logOut);
+
+function showModal() {
+  $("#ForgatPasswordModal").modal("show");
+}
+
+function forgotPass(e) {
+  let user = $(".re-createUsername").val();
+  let pswd = $(".re-createPassword").val();
+  let pswdSecond = $(".re-createPasswordSecond").val();
+  console.log(user, pswd, pswdSecond);
+  /// check for valid inputs and that the 2 passwords match
+  if (user == "") {
+    alert("Please insert your Username!");
+    return;
+  }
+  if (pswd !== pswdSecond || pswd == "") {
+    alert("Passwords do not match!");
+    return;
+  }
+  /////take users froom local storage
+  let users = JSON.parse(localStorage.getItem("users"));
+  let check = false;
+  // console.log(users);
+  for (element of users) {
+    if (element.userName.toLowerCase() === user.toLowerCase()) {
+      ////if exists update password
+      element.password = pswd;
+      check = true;
+    }
+  }
+  if (!check) alert("Username not found! Please register!");
+
+  localStorage.setItem("users", JSON.stringify(users));
+  console.log(users);
+  hideForgotModal();
+}
+
+function hideForgotModal() {
+  $("#ForgatPasswordModal").modal("hide");
+}
+
+$(".closeForgot").on("click", hideForgotModal);
