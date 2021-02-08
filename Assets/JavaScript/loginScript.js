@@ -63,14 +63,21 @@ function newUser(e) {
   if (name && password) {
     let check = checkUserName(name);
     if (check) {
-      alert("UserName already taken!");
+      //replaced the alert with #modal1
+      registerHide();
+      $("#modal1").modal("show");
       return;
     } else {
       storeUser(name, password);
       clearFIelds();
       closeModal();
     }
-  } else alert("Please insert a valid input!");
+  } else {
+  //replaced the alert with #modal2
+  registerHide();
+  $("#modal2").modal("show");
+    
+}
 }
 //////LOGIN LOGIC
 function login(e) {
@@ -141,11 +148,15 @@ function forgotPass(e) {
   console.log(user, pswd, pswdSecond);
   /// check for valid inputs and that the 2 passwords match
   if (user == "") {
-    alert("Please insert your Username!");
+    // alert("Please insert your Username!");
+    PWHide();
+    $("#modal3").modal("show");
     return;
   }
   if (pswd !== pswdSecond || pswd == "") {
-    alert("Passwords do not match!");
+    // alert("Passwords do not match!");
+    PWHide();
+    $("#modal4").modal("show");
     return;
   }
   /////take users froom local storage
@@ -159,8 +170,12 @@ function forgotPass(e) {
       check = true;
     }
   }
-  if (!check) alert("Username not found! Please register!");
-
+  if (!check) {
+  // alert("Username not found! Please register!");
+  PWHide();
+  $("#modal5").modal("show");
+  return;
+  }
   localStorage.setItem("users", JSON.stringify(users));
   console.log(users);
   hideForgotModal();
@@ -171,3 +186,16 @@ function hideForgotModal() {
 }
 
 $(".closeForgot").on("click", hideForgotModal);
+
+function registerHide() {
+  $("#exampleModal").modal("hide");
+}
+function registerShow() {
+  $("#exampleModal").modal("show");
+}
+function PWHide() {
+  $("#ForgatPasswordModal").modal("hide");
+}
+function PWShow() {
+  $("#ForgatPasswordModal").modal("show");
+}

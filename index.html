@@ -14,6 +14,91 @@
 
 
 </head>
+<!-- Register button not able at JS line 66 -->
+<div class="modal fade" id="modal1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Username already taken. Please choose another name.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="registerShow()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- invalid input for registration at line 76 -->
+<div class="modal fade" id="modal2" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Invalid input. Try again.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="registerShow()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- insert your username for ForgotPassword input at line 151 -->
+<div class="modal fade" id="modal3" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Insert your existing username.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="PWShow()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- insert your username for ForgotPassword input at line 157 -->
+<div class="modal fade" id="modal4" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Passwords don't match!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="PWShow()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- username Not Found for ForgotPassword input at line 175 -->
+<div class="modal fade" id="modal5" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Username not found! Try again.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick="PWShow()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <body>
   <div class="background">
@@ -64,14 +149,14 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary registerBtn">Save changes</button>
+            <button type="button" class="btn btn-primary registerBtn" data-bs-toggle="modal">Save changes</button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Forgat-password Modal -->
-    <div class="col-md-6">
+    <div class="col-md-6" id="PW">
       <div class="modal fade" id="ForgatPasswordModal" tabindex="-1" aria-labelledby="ForgatPasswordModal"
         aria-hidden="true">
         <div class="modal-dialog">
