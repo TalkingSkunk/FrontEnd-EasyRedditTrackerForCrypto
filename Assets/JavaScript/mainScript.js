@@ -82,8 +82,8 @@ const randomReddit = () => {
   let cryptoObj = cryptoDB[name];
   let redditObj = cryptoObj[`reddit${Math.floor(Math.random() * 25)}`];
 
-  //   console.log(cryptoObj);
-  //   console.log(redditObj);
+  console.log(cryptoObj);
+  console.log(redditObj);
 
   //   console.log(cryptoObj.priceChange);
   //   console.log(cryptoObj.percentChange);

@@ -4,13 +4,13 @@ body {
   font-family: sans-serif;
   background: linear-gradient(to right, #ff5700, #8dc647);
 }
-
+/* 
 .background::before {
   width: 1500px;
   height: 1500px;
-  background: linear-gradient(to right, #ff5700, #8dc647);
+  background: yellow;
   z-index: -1;
-}
+} */
 
 a:link {
   color: #ff5700;
