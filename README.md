@@ -3,10 +3,10 @@
 ### - A smart tracker for cypto lovers and reddit fans!
 
 **Deployed application URL**
-https://gio86krt.github.io/FrontEnd-EasyRedditTrackerForCrypto/
+https://talkingskunk.github.io/RedditTracker/
 
 **GitHub Repository URL**
-https://github.com/Gio86krt/FrontEnd-EasyRedditTrackerForCrypto
+https://github.com/TalkingSkunk/RedditTracker/
 
 ## Screenshot
 
